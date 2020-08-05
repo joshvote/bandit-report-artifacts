@@ -1,27 +1,16 @@
-![Security check - Bandit](https://github.com/ioggstream/bandit-report
--artifacts/workflows/Bandit%20checks/badge.svg)
+![Security check - Bandit](https://github.com/ioggstream/bandit-report-artifacts/workflows/Bandit%20checks/badge.svg)
+  
+This <a href="https://github.com/features/actions">GitHub Action</a> runs
+bandit checks on your code and annotates the interested lines with the
+reported issues.
 
 <p align="center">
-  <a href="https://github.com/marketplace/actions/bandit-report-artifacts">
-    <img width="150px" src="./assets/logo.png">
-  </a>
+  <img src="./assets/screenshot-jobs.png">
 </p>
 
-<h1 align="center">
-  Github action which can make security check reports after the running bandit as artifacts.
-</h1>
 
 <p align="center">
-  This <a href="https://github.com/features/actions">GitHub Action</a> runs
-   bandit checks on your code and annotates the interested lines with the
-    issues.
-</p>
-
-<p align="center">
-  <img src="./assets/screenshot_new.png">
-</p>
-<p align="center">
-  <img src="./assets/screenshot.png">
+  <img src="./assets/screenshot-issues.png">
 </p>
 
 ## Usage
@@ -98,11 +87,6 @@ One of the following deployment options must be configured.
 
 ---
 
-
-### Artifacts 📁
-
-You can get the bandit security checks reports for you python project.
-[learn more about artifacts](https://help.github.com/en/actions/configuring-and-managing-workflows/persisting-workflow-data-using-artifacts).
 
 #### Bandit report (security checks report) 👮‍♂️
 

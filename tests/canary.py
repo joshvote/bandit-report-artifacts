@@ -9,4 +9,5 @@ a = eval("""
     + randint(0, 10)
 
 """)
+
 assert a
