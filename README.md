@@ -4,16 +4,24 @@ This <a href="https://github.com/features/actions">GitHub Action</a> runs
 bandit checks on your code and annotates the interested lines with the
 reported issues.
 
-<p align="center">
-  <img src="./assets/screenshot-jobs.png">
-</p>
+The action is run in the workflow
 
+![](assets/screenshot-jobs.png)
 
-<p align="center">
-  <img src="./assets/screenshot-issues.png">
-</p>
+A list of all issues is shown in the Workflow
+
+![](assets/screenshot-issues.png)
+
+The interested LoC are shown in the PR
+ 
+![](assets/screenshot-code.png)
+
 
 ## Usage
+
+To add this Github action to your repository you can either run it copying
+it under your repo or via the Github Action Marketplace, eg:
+
 
 ```yml
 name: Security check - Bandit
@@ -32,15 +40,14 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Security check - Bandit
-      uses: ./
+      uses: ioggstream/bandit-report-artifacts@v0.0.2
       with:
-        python_version: ${{ matrix.python-version }}
         project_path: .
         ignore_failure: true
 
+    # This is optional
     - name: Security check report artifacts
       uses: actions/upload-artifact@v1
-      # if: failure()
       with:
         name: Security report
         path: output/security_report.txt
