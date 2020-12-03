@@ -5,10 +5,11 @@ mkdir -p $GITHUB_WORKSPACE/output
 touch $GITHUB_WORKSPACE/output/security_report.txt
 
 if [ -f "${INPUT_CONFIG_FILE}" ]; then
+    echo "Using config file: ${INPUT_CONFIG_FILE}"
     BANDIT_CONFIG="-c ${INPUT_CONFIG_FILE}"
 fi
 
-bandit "${BANDIT_CONFIG}" -r "${INPUT_PROJECT_PATH}" -o "${GITHUB_WORKSPACE}/output/security_report.txt" -f 'txt'
+bandit ${BANDIT_CONFIG} -r "${INPUT_PROJECT_PATH}" -o "${GITHUB_WORKSPACE}/output/security_report.txt" -f 'txt'
 BANDIT_STATUS="$?"
 
 GITHUB_TOKEN=$INPUT_REPO_TOKEN python /main.py -r $INPUT_PROJECT_PATH
