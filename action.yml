@@ -16,6 +16,11 @@ inputs:
     required: false
     default: false
 
+  config_file:
+    description: "The yaml config file to use"
+    required: false
+    default: ""
+
   repo_token:
     required: true
     description: |
