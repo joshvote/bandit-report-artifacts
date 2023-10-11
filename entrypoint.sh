@@ -1,5 +1,6 @@
 #!/bin/sh -l
 
+bandit --version
 echo "🔥🔥🔥🔥🔥Running security check🔥🔥🔥🔥🔥🔥"
 mkdir -p $GITHUB_WORKSPACE/output
 touch $GITHUB_WORKSPACE/output/security_report.txt
